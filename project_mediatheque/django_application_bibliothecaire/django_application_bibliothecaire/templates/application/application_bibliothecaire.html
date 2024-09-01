@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Notre livre, notre média</title>
+</head>
+<body>
+    <div>
+        <h1>Application bibliothecaire</h1>
+    </div>
+    <div>
+        <div>
+            <h2>Membre</h2>
+        </div>
+        <div>
+            <h3>Liste des membres</h3>
+            <ul>
+            {% for membre in membres %}
+            <li> Nom : {{ membre.nom }} | Prenom : {{ membre.prenom }} | Nombre d'emprunt : {{ membre.Emprunt }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h2>Médiathèque</h2>
+        </div>
+        <div>
+            <h3>Liste des Livres</h3>
+             <ul>
+            {% for livre in livres %}
+             <li> Nom : {{ livre.name }} | Auteur : {{ livre.auteur}} | Disponible : {{livre.disponible}} | Date d'emprunt : {{livre.dateEmprunt}} | Emprunteur : {{ livre.emprunteur }} </li>
+            {% endfor %}
+            </ul>
+
+        </div>
+        <div>
+            <h3>Liste des CD</h3>
+             <ul>
+            {% for cd in cds %}
+             <li> Nom : {{ cd.name }} | Auteur : {{ cd.auteur}} | Disponible : {{cd.disponible}} |  Date d'emprunt : {{ cd.dateEmprunt}} | Emprunteur : {{ cd.emprunteur }} </li>
+            {% endfor %}
+            </ul>
+
+        </div>
+        <div>
+            <h3>Liste des DVD</h3>
+            <ul>
+            {% for dvd in dvds %}
+            <li> Nom : {{ dvd.name }} | Auteur : {{ dvd.auteur}} | Disponible : {{dvd.disponible}} |  Date d'emprunt : {{ dvd.dateEmprunt}} | Emprunteur : {{ dvd.emprunteur }}  </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+             <h3>Liste des Jeux De Plateau</h3>
+             <ul>
+             {% for jdp in jdps %}
+             <li> Nom : {{ jdp.name }} | Createur: {{ jdp.createur }}   </li>
+                {% endfor %}
+             </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
